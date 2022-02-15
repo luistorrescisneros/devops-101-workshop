@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: my_github                       # <-- replace with your integration
-      path: katcosgrove/devops-101-workshop   # <-- replace with your repository name
+      path: luistorrescisneros/devops-101-workshop   # <-- replace with your repository name
       branches:
         include: new-pipeline
 
@@ -12,7 +12,7 @@ resources:
     configuration:
       registry: art                                # <-- replace with your artifactory integration
       sourceRepository: demo-docker-local               # <-- required if registry is Artifactory
-      imageName: katcsandbox.jfrog.io/demo-docker-local/docker-demo # < -- replace with your image path and name
+      imageName: luistorrescisneros.jfrog.io/demo-docker-local/docker-demo # < -- replace with your image path and name
       imageTag: latest
       autoPull: true
       
