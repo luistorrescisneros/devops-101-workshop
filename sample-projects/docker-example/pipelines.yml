@@ -40,7 +40,7 @@ pipelines:
           affinityGroup: demo_group
           dockerFileLocation: ./sample-projects/docker-example
           dockerFileName: Dockerfile
-          dockerImageName: katcsandbox.jfrog.io/demo-docker-local/docker-demo  # replace with your image path and name
+          dockerImageName: luistorrescisneros.jfrog.io/demo-docker-local/docker-demo  # replace with your image path and name
           dockerImageTag: ${run_number}
           inputResources:
             - name: demo_repo
