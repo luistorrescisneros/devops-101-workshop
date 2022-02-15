@@ -35,11 +35,11 @@ jobs:
       - name: Build the docker images
         run: |
           docker login luistorrescisneros.jfrog.io -u ${{ secrets. JF_ARTIFACTORY_USER}} -p ${{ secrets. JF_ARTIFACTORY_PASSWORD}}
-          docker build --tag luistorrescisneros.jfrog.io/devops-101-docker-local/my-image:latest ./sample-projects/docker-example
+          docker build --tag luistorrescisneros.jfrog.io/docker-local/my-image:latest ./sample-projects/docker-example
       # Update the docker push command to point at your JFrog Platform instance instead of mine.
       - name: Docker push with JFrog CLI
         run: |
-          ./jfrog rt docker-push luistorrescisneros.jfrog.io/devops-101-docker-local/my-image:latest docker --build-name=devops101-docker --build-number=${{ github.run_number }}
+          ./jfrog rt docker-push luistorrescisneros.jfrog.io/docker-local/my-image:latest docker --build-name=devops101-docker --build-number=${{ github.run_number }}
   
       - name: Collect the environment variables and create the build info 
         run: |
